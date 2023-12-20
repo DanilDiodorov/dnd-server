@@ -1,0 +1,77 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "filters": {},
+    "formatters": {
+        "verbose": {
+            "format": "[%(asctime)s] |%(process)08d| %(levelname)08s: %(message)s <%(name)s>"
+        }
+    },
+    "handlers": {
+        "main": {
+            "class": "logging.FileHandler",
+            "filename": "/home/asterisk/astersay/v2/model_1/logs/main.log",
+            "formatter": "verbose"
+        },
+        "backend": {
+            "class": "logging.FileHandler",
+            "filename": "/home/asterisk/astersay/v2/model_1/logs/backend.log",
+            "formatter": "verbose"
+        },
+        "dialog": {
+            "class": "logging.FileHandler",
+            "filename": "/home/asterisk/astersay/v2/model_1/logs/dialog.log",
+            "formatter": "verbose"
+        }
+    },
+    "loggers": {
+        "astersay": {
+            "handlers": [
+                "main"
+            ],
+            "level": "INFO"
+        },
+        "astersay.backends": {
+            "handlers": [
+                "backend"
+            ],
+            "level": "DEBUG"
+        },
+        "astersay.agi": {
+            "handlers": [
+                "dialog"
+            ],
+            "level": "DEBUG"
+        },
+        "astersay.dialog": {
+            "handlers": [
+                "dialog"
+            ],
+            "level": "DEBUG"
+        },
+        "astersay.conf": {
+            "handlers": [
+                "dialog"
+            ],
+            "level": "DEBUG"
+        },
+        "astersay.backends.yandex": {
+            "handlers": [
+                "dialog"
+            ],
+            "level": "INFO"
+        },
+        "astersay.backends.vosk": {
+            "handlers": [
+                "dialog"
+            ],
+            "level": "INFO"
+        },
+        "astersay.backends.tinkoff": {
+            "handlers": [
+                "dialog"
+            ],
+            "level": "INFO"
+        }
+    }
+}

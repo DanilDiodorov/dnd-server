@@ -1,0 +1,33 @@
+{
+    "auth": {
+        "api_key": "",
+        "private_filename": "/home/asterisk/astersay/for_test/tinkoff_private.pem",
+        "token_filename": "/home/asterisk/astersay/for_test/tinkoff_token.json",
+        "service_account_id": "",
+        "sub": ""
+    },
+    "recognizer": {
+        "model": "general",
+        "audio_encoding": "LINEAR16",
+        "chunk_size": 1024,
+        "language_code": "ru-RU",
+        "profanity_filter": false,
+        "sample_rate_hertz": 8000,
+        "enable_automatic_punctuation": false,
+        "enable_interim_results": false,
+        "interim_results_interval": 1
+    },
+    "synthesizer": {
+        "sample_rate_hertz": 48000,
+        "speed": 1,
+        "storage": "/home/asterisk/astersay/for_test/storage",
+        "voice": "alyona",
+        "lang": "ru-RU",
+        "format": "lpcm",
+        "convertor": {
+            "command": "sox -t raw -r 48k -b 16 -e signed-integer -c 1 \"%s\" -t wav -r 8k -c 1 \"%s\"",
+            "src_format": "raw",
+            "src_delete": true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "recognizer": "astersay.backends.yandex.YandexRecognizer",
+    "synthesizer": "astersay.backends.yandex.YandexSynthesizer",
+    "morphology_processor": "astersay.morphology.Pymorphy2Processor",
+    "export": "{work_dir}/export/{date}/{dialog}_{time}.json",
+    "remote_export": {
+        "active": false,
+        "url": "https://example.com",
+        "headers": {},
+        "mode": "data",
+        "delete_local_on_success": true,
+        "retries_on_failure": 3
+    },
+    "disable_stop_voices": false
+}

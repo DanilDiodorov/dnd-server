@@ -1,0 +1,12 @@
+{
+    "connection": {
+        "host": "localhost",
+        "port": 2700
+    },
+    "recognizer": {
+        "chunk_size": 8000,
+        "max_size": 10485760,
+        "max_time": 300,
+        "sample_rate_hertz": 8000
+    }
+}

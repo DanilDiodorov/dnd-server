@@ -1,0 +1,34 @@
+{
+    "auth": {
+        "private_filename": "/home/asterisk/astersay/v2/model_1/yandex_private.pem",
+        "token_filename": "/home/asterisk/astersay/v2/model_1/yandex_token.json",
+        "key_id": "ajenv3r21llfntq630ih",
+        "service_account_id": "ajercpfngdlf12l5k79f",
+        "folder_id": "b1g6gjuevrvv3nvd6cjv"
+    },
+    "recognizer": {
+        "model": "general",
+        "audio_encoding": "LINEAR16_PCM",
+        "chunk_size": 1024,
+        "language_code": "ru-RU",
+        "partial_results": true,
+        "profanity_filter": false,
+        "single_utterance": false,
+        "raw_results": false,
+        "sample_rate_hertz": 8000
+    },
+    "synthesizer": {
+        "emotion": "neutral",
+        "format": "lpcm",
+        "lang": "ru-RU",
+        "sample_rate_hertz": 48000,
+        "speed": 1,
+        "storage": "/home/asterisk/astersay/v2/model_1/storage",
+        "voice": "oksana",
+        "convertor": {
+            "command": "sox -t raw -r 48k -b 16 -e signed-integer -c 1 \"%s\" -t wav -r 8k -c 1 \"%s\"",
+            "src_format": "raw",
+            "src_delete": true
+        }
+    }
+}
